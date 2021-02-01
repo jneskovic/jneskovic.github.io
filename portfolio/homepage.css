@@ -1,0 +1,36 @@
+#main { 
+        background-color: #CCCCCC;
+        color: #333333;
+        font-family: Verdana, Ariel, sans-serif;}
+#img-div { 
+           text-align: center;
+           padding-top: 0.6em;
+           padding-bottom: 0.6em;}
+#image { 
+         height: 450px;
+         background-image: url(java_script.jpg);
+         background-size: cover;
+	     background-position: center center;
+         background-repeat: no-repeat;}
+#title { 
+	     text-align: center;
+         margin-top: 0;
+         margin-bottom: 0;
+         font-family: "Times New Roman", Palatino, serif;
+         letter-spacing: 0.25em;
+         padding-top: 0.6em;
+         padding-bottom: 0.6em;}
+h3 {
+	font-family: "Times New Roman", Palatino, serif;
+	text-align: center;}
+ul {
+    text-align: center;
+	padding-left: 30em;
+    font-size: 110%}
+li {
+    text-align: left;}
+footer {
+	    text-align: center;
+	    font-size: 120%;
+	    font-weight: bold;
+		padding-bottom: 1.0em;}
