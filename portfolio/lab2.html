@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>The Amazing Number Trick</title>
+<meta charset = "utf-8">
+<style>
+body { 
+       background-color: #E6E6FA;
+       color: #333333;
+	     font-family: Verdana, Ariel, sans-serif;
+       font-size: 110%; }
+nav {
+      font-weight: bold;
+      color: #833B83;
+      padding-bottom: 3.5em;}
+h1 h2 { font-family: "Times New Roman", Palatino, serif;}
+</style>
+</head>
+<body>
+<nav>
+<a href = "index.html">Home</a></li> 
+</nav>
+<script>
+"use strict"
+//Jelena Neskovic, 2/4/2021
+/*The user is asked to enter a whole number. Some arithmetic operations are then applied
+  to get number 7 as a result.*/
+const userEntry = parseInt(prompt("Please enter an integer (a whole number).")); //user enters a whole number
+let num1 =(userEntry + 9); // 9 added to the number
+let num2 =(num1 * 2); // number multiplied by 2
+let num3 =(num2 - 4); // 4 subtracted from the number
+let num4 =(num3/2); // number divided by 2
+let num5 =(num4- userEntry); // original number subtracted from the last number
+alert ("Your final number is  " + num5 + "!" );
+     
+let output =   `<p>
+                <ul>
+                  <li>I added 9 to&nbsp;${userEntry}. The new number is&nbsp;${num1}.</li><br>
+                  <li>I multiplied&nbsp;${num1} by 2. The new number is&nbsp;${num2}.</li> <br> 
+                  <li>I subtracted 4 from&nbsp;${num2}. The new number is&nbsp;${num3}.</li><br>
+                  <li>I divided&nbsp;${num3} by 2. The new number is&nbsp;${num4}.</li><br>
+                  <li>I subtracted the original number from&nbsp;${num4}. The new number is&nbsp;${num5}.</li><br>
+                  <h3>Your final number is&nbsp;${num5}.<h3><br><br>
+                  <h2>Thanks for playing!<h2>
+                  <button onclick="location.reload()">Play again?</button>
+              < </p>`;
+
+document.write(output);
+
+</script>
+</body>
+</html>
