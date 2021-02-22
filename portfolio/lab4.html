@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	    <title>Mad Libs</title>
+        <meta charset = "utf-8">
+        <style type="text/css">
+        #wrapper { background-color:bisque;
+                    width: 70%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    padding: 2em;}
+       body { 
+            color: #333333;
+	        font-family: Verdana, Ariel, sans-serif;
+            font-size: 110%; }
+       nav {
+            font-weight: bold;
+            color: #833B83;
+            padding-bottom: 1.5em;
+       }
+        </style>
+    </head>
+<body>
+<div id = "wrapper">
+<nav>
+<a href = "index.html">Home</a>
+</nav>
+<h2>Madlibs</h2>
+<img src = "mad_libs.jpg" width="100" height="100" alt="Mad Libs">
+<p>Please enter the following information:</p>
+
+<input type="text" id="pluralNoun" placeholder="a plural noun"><br><br>
+<input type="text" id="noun1" placeholder="a noun"><br><br>
+<input type="text" id="noun2" placeholder="another noun"><br><br>
+<input type="text" id="song" placeholder="song"><br><br>
+<input type="text" id="verb" placeholder="verb"><br><br><br>
+<script>
+"use strict";
+function displayOutput() { 
+      const $ = selector => document.querySelector(selector);
+      let pluralNoun = document.querySelector("#pluralNoun").value;
+      pluralNoun = pluralNoun.toLowerCase();
+      let noun1 = document.querySelector("#noun1").value;
+      noun1 = noun1.toLowerCase();
+      let noun2 = document.querySelector("#noun2").value;
+      noun2 = noun2.toLowerCase();
+      let song = document.querySelector("#song").value;
+      song = song.toLowerCase();
+      let verb = document.querySelector("#verb").value;
+      verb = verb.toLowerCase();
+     
+      
+      let output = `<ol>
+                      <li>Keep ${pluralNoun} on the steering wheel at all times</li><br>
+                      <li>Step on the ${noun1} to speed up and the ${noun2} to slow down</li><br>
+				      <li>${song} song</li><br>
+				      <li>Honk when you see ${verb} on a street sign</li><br>
+                    </ol><br><br<br><br>
+                    <button onclick="location.reload()">Go Again?</button>`;
+            
+
+      document.getElementById("display").innerHTML = output;
+            
+} 
+</script>
+<button type="button" onclick="displayOutput()">Submit</button>
+<p id="display"></p>
+</div>
+</body>
+</html> 
