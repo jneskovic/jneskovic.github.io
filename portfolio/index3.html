@@ -1,39 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<title>Cycling Banner</title>
-<meta charset = "utf-8">
+    <title>Super Hero Cycling Banners</title>
+    <meta charset="utf-8">
 </head>
+
 <body>
-<div>
-<a href = "linkPage.html"><img src="superhero banners/superhero1.png" id = "adBanner" alt = "Ad Banner"></a>
-</div>
-<script>
-/*window.onload = rotate;
-var theAd = 0;
-var adImages = newArray("superhero banners/superhero1.png","superhero banners/superhero2.png",
-"superhero banners/superhero3.png","superhero banners/superhero4.png", "superhero banners/superhero5.png", "superhero banners/superhero6.png");
-function rotate() {
-theAd++;
-if (theAd == adImages.length) {theAd = 0;}
-document.getElementById("adBanner").src = adImages[theAd];
-setTimeout(rotate, 3 * 1000);}*/
-window.onload = initBannerLink;
-var theAd = 0;
-var adURL = "https://jneskovic.github.io/portfolio/index3.html";
-var adImages = new Array ("superhero1.png","superhero2.png","superhero3.png","superhero4.png", "superhero5.png", "superhero6.png");
-function initBannerLink() {
-if (document.getElementById("adBanner").parentNode.tagName == "A")
-{document.getElementById("adBanner").parentNode.onclick =newLocation;}
-rotate();}
-function newLocation() {document.location.href = adURL;
-return false;}
-function rotate() {
-theAd++;
-if (theAd == adImages.length) {
-theAd = 0;}
-document.getElementById("adBanner").src = adImages[theAd];
-setTimeout(rotate, 3 * 1000);}
-</script>
+    <div>
+        <a href="JSProjects/index3.html"><img src="images/superhero1.png" id="adBanner" alt="Ad Banner"></a>
+    </div>
+    <script>
+        window.onload = initBannerLink;
+        var theAd = 0;
+        var adURL = new Array("google.com","microsoft.com","yahoo.com","apple.com","isp.netscape.com","amazon.com");
+        var adImages = new Array("superhero1.png", "superhero2.png", "superhero3.png", "superhero4.png", "superhero5.png", "superhero6.png");
+        function initBannerLink() {
+            if (document.getElementById("adBanner").parentNode.tagName == "A") { document.getElementById("adBanner").parentNode.onclick = newLocation; }
+            setTimeout(rotate, 3 * 1000);
+        }
+        function newLocation() {
+            document.location.href = "http://www." + adURL[theAd];
+            return false;
+        }
+        function rotate() {
+            theAd++;
+            if (theAd == adImages.length) {
+                theAd = 0;
+            }
+            document.getElementById("adBanner").src = 'images/'+ adImages[theAd];
+            setTimeout(rotate, 3 * 1000);
+        }
+    </script>
 </body>
+
 </html>
