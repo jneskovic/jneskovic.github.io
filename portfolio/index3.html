@@ -8,7 +8,7 @@
 
 <body>
     <div>
-        <a href="JSProjects/index3.html"><img src="images/superhero1.png" id="adBanner" alt="Ad Banner"></a>
+        <a href="JSProjects/index3.html"><img src="superhero1.png" id="adBanner" alt="Ad Banner"></a>
     </div>
     <script>
         window.onload = initBannerLink;
@@ -28,7 +28,7 @@
             if (theAd == adImages.length) {
                 theAd = 0;
             }
-            document.getElementById("adBanner").src = 'images/'+ adImages[theAd];
+            document.getElementById("adBanner").src = adImages[theAd];
             setTimeout(rotate, 3 * 1000);
         }
     </script>
