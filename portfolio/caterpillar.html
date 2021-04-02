@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Challenge: The changing caterpillar</title>
+        <style>
+            .result {
+                font-size: 20px;
+                font-weight: bold;
+                color: blue;
+            }
+        </style>
+    </head>
+    <body>
+    <h1>The Caterpillar</h1>
+    
+    <p>This is a <strong>caterpillar</strong> in its natural habitat:</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Monarch_caterpillar_on_swan_plant_branchlet.jpg/640px-Monarch_caterpillar_on_swan_plant_branchlet.jpg" width="400" alt="caterpillar">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+	$("h1").text("Butterflies"); //changing the heading
+	$("p").html("This is a <strong>butterfly</strong> in its natural habitat:");//changing the paragraph
+	$("img").attr("src","https://www.kasandbox.org/programming-images/animals/butterfly_monarch.png"); //changing the image
+    $("img").attr("alt", "butterfly");// changing the alt attribute
+	$("h1").css("color","orange"); //changing the color of the heading
+	var newP = $("<p>");// adding a new paragraph
+    // inserting new text into the paragraph
+	newP.html("Monarch butterflies are known for their long migration.<br> Every year monarch butterflies will travel a great distance (sometimes over 4000 km),<br> females will lay eggs and a new generation of monarchs will travel back,<br> completing the cycle.");
+	newP.addClass("result"); // adding the call to the new paragraph
+	$("body").append(newP);  // putting the new paragraph at the bottom 
+    </script>
+    
+    </body>
+</html>
