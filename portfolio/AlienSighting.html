@@ -102,15 +102,15 @@
 <h2>Number of Legs</h2>
 <input type="text" id="spinner2" ><br><br>
 
-<h2>Creature Height</h2>
-<p id = "height"></p>
-<div id="slider1"></div><br><br>
-
-<h2>Creature Weight</h2>
+<h2>Creature Weight (in lbs.)</h2>
 <p id = "weight"></p>
 <div id="slider2"></div><br><br>
 
-<h3>What was the main color of the alien?</h3>
+<h2>Creature Height (in ft.)</h2>
+<p id = "height"></p>
+<div id="slider1"></div><br><br>
+
+<h2>What was the main color of the alien?</h2>
 <div id="red"></div>
 <div id="green"></div>
 <div id="blue"></div>
@@ -142,7 +142,7 @@ $("#slider1").slider({
 });
 $("#slider2").slider({
       min: 0,
-      max: 500,
+      max: 300,
       value: 0,
       slide: function( event, ui ) {
         $("#weight" ).text(ui.value);
